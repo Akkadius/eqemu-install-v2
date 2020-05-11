@@ -68,14 +68,14 @@ IF NOT EXIST "C:\Program Files\MariaDB 10.0" (
 :GET_EQEMU_UPDATE
 IF NOT EXIST "eqemu_server.pl" (
 	echo Fetching 'eqemu_server.pl'...
-	C:\Perl64\bin\perl.exe -MLWP::UserAgent -e "require LWP::UserAgent;  my $ua = LWP::UserAgent->new; $ua->timeout(10); $ua->env_proxy; my $response = $ua->get('https://raw.githubusercontent.com/EQEmu/Server/master/utils/scripts/eqemu_server.pl'); if ($response->is_success){ open(FILE, '> eqemu_server.pl'); print FILE $response->decoded_content; close(FILE); }
+	C:\Strawberry\perl\bin\perl.exe -MLWP::UserAgent -e "require LWP::UserAgent;  my $ua = LWP::UserAgent->new; $ua->timeout(10); $ua->env_proxy; my $response = $ua->get('https://raw.githubusercontent.com/EQEmu/Server/master/utils/scripts/eqemu_server.pl'); if ($response->is_success){ open(FILE, '> eqemu_server.pl'); print FILE $response->decoded_content; close(FILE); }
 )
 IF NOT EXIST "eqemu_server.pl" GOTO GET_EQEMU_UPDATE
 
 :GET_EQEMU_CONFIG
 IF NOT EXIST "eqemu_config.json" (
 	echo Fetching 'eqemu_config.json'...
-	C:\Perl64\bin\perl.exe -MLWP::UserAgent -e "require LWP::UserAgent;  my $ua = LWP::UserAgent->new; $ua->timeout(10); $ua->env_proxy; my $response = $ua->get('https://raw.githubusercontent.com/Akkadius/eqemu-install-v2/master/eqemu_config.json'); if ($response->is_success){ open(FILE, '> eqemu_config.json'); print FILE $response->decoded_content; close(FILE); }
+	C:\Strawberry\perl\bin\perl.exe -MLWP::UserAgent -e "require LWP::UserAgent;  my $ua = LWP::UserAgent->new; $ua->timeout(10); $ua->env_proxy; my $response = $ua->get('https://raw.githubusercontent.com/Akkadius/eqemu-install-v2/master/eqemu_config.json'); if ($response->is_success){ open(FILE, '> eqemu_config.json'); print FILE $response->decoded_content; close(FILE); }
 )
 IF NOT EXIST "eqemu_config.json" GOTO GET_EQEMU_UPDATE
 
