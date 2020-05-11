@@ -22,9 +22,6 @@
       "host": "",
       "port": "7778"
     },
-    "webinterface": {
-      "port": "9081"
-    },
     "world": {
       "loginserver1": {
         "account": "",
@@ -49,11 +46,6 @@
         "enabled": "true"
       },
       "key": "somelongrandomstring12345asdfffff",
-      "http": {
-        "port": "9080",
-        "enabled": "true",
-        "mimefile": "mime.types"
-      },
       "shortname": "Akkas PEQ Installer",
       "longname": "Akkas PEQ Installer"
     },
