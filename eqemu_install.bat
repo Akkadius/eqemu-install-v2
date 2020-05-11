@@ -22,7 +22,7 @@ pause
 
 echo #########################################################
 echo #::: EverQuest Emulator Modular Installer
-echo #::: Installer Author: Akkadius, Ali
+echo #::: Installer Author: Akkadius
 echo #:::
 echo #::: EQEmulator Server Software is developed and maintained
 echo #:::	by the EQEmulator Developement team
@@ -56,7 +56,7 @@ echo #########################################################
 cd "%~dp0"
 %~d0%
 
-IF NOT EXIST "C:\Perl64\bin" (
+IF NOT EXIST "C:\Strawberry\perl\bin" (
 	GOTO :INSTALL_PERL
 )
 
@@ -85,7 +85,7 @@ IF EXIST "VC_redist.x64.exe" (
 	del VC_redist.x64.exe
 )
 
-C:\Perl64\bin\perl.exe eqemu_server.pl new_server
+C:\Strawberry\perl\bin\perl.exe eqemu_server.pl new_server
 
 pause
 
@@ -93,13 +93,13 @@ GOTO :EXIT
 
 :INSTALL_PERL
 	echo Installing Perl... LOADING... PLEASE WAIT...
-	start /wait msiexec /i ActivePerl-5.16.3.1604-MSWin32-x64-298023.msi PERL_PATH="Yes" /q
-	del ActivePerl-5.16.3.1604-MSWin32-x64-298023.msi
-	SET PATH=%path%;C:\Perl64\site\bin
-	SET PATH=%path%;C:\Perl64\bin
+	start /wait msiexec /i strawberry-perl-5.24.4.1-64bit.msi PERL_PATH="Yes" /q
+	del strawberry-perl-5.24.4.1-64bit.msi
+	SET PATH=%path%;C:\Strawberry\perl\bin\site\bin
+	SET PATH=%path%;C:\Strawberry\perl\bin
 
 	assoc .pl=Perl
-	ftype Perl="C:\Perl64\bin\perl.exe" %%1 %%*
+	ftype Perl="C:\Strawberry\perl\bin\perl.exe" %%1 %%*
 
 	GOTO :MAIN
 
