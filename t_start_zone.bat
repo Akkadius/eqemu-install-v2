@@ -2,5 +2,5 @@
 
 @echo off
 cls
-start "bin/zone.exe"
+start bin/zone.exe
 exit

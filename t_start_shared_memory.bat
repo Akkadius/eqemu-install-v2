@@ -2,5 +2,5 @@
 
 @echo off
 cls
-start bin/world.exe
+start bin/shared_memory.exe
 exit
