@@ -22,7 +22,7 @@ pause
 
 echo #########################################################
 echo #::: EverQuest Emulator Modular Installer
-echo #::: Installer Author: Akkadius
+echo #::: Installer Author(s): Akkadius, Ali
 echo #:::
 echo #::: EQEmulator Server Software is developed and maintained
 echo #:::	by the EQEmulator Developement team
