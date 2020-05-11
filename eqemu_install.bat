@@ -38,9 +38,9 @@ echo #########################################################
 echo #::: To be installed:
 echo #########################################################
 echo - Server running folder - Will be installed to the folder you ran this script
-echo - MariaDB (MySQL) - Database engine
+echo - MariaDB x64 (MySQL) - Database engine
 echo - Heidi SQL (Comes with MariaDB)
-echo - Perl 5.12.3 :: Scripting language for quest engines
+echo - Perl x64 5.24.4.1 :: Scripting language for quest engines
 echo - LUA Configured :: Scripting language for quest engines
 echo - Latest PEQ Database
 echo - Latest PEQ Quests
@@ -68,14 +68,14 @@ IF NOT EXIST "C:\Program Files\MariaDB 10.0" (
 :GET_EQEMU_UPDATE
 IF NOT EXIST "eqemu_server.pl" (
 	echo Fetching 'eqemu_server.pl'...
-	C:\Strawberry\perl\bin\perl.exe -MLWP::UserAgent -e "require LWP::UserAgent;  my $ua = LWP::UserAgent->new; $ua->timeout(10); $ua->env_proxy; my $response = $ua->get('https://raw.githubusercontent.com/EQEmu/Server/master/utils/scripts/eqemu_server.pl'); if ($response->is_success){ open(FILE, '> eqemu_server.pl'); print FILE $response->decoded_content; close(FILE); }
+	powershell -Command "\$ProgressPreference = 'SilentlyContinue'; Invoke-RestMethod -ContentType \"application/octet-stream\" -Uri https://raw.githubusercontent.com/EQEmu/Server/master/utils/scripts/eqemu_server.pl -OutFile eqemu_server.pl"
 )
 IF NOT EXIST "eqemu_server.pl" GOTO GET_EQEMU_UPDATE
 
 :GET_EQEMU_CONFIG
 IF NOT EXIST "eqemu_config.json" (
 	echo Fetching 'eqemu_config.json'...
-	C:\Strawberry\perl\bin\perl.exe -MLWP::UserAgent -e "require LWP::UserAgent;  my $ua = LWP::UserAgent->new; $ua->timeout(10); $ua->env_proxy; my $response = $ua->get('https://raw.githubusercontent.com/Akkadius/eqemu-install-v2/master/eqemu_config.json'); if ($response->is_success){ open(FILE, '> eqemu_config.json'); print FILE $response->decoded_content; close(FILE); }
+	powershell -Command "\$ProgressPreference = 'SilentlyContinue'; Invoke-RestMethod -ContentType \"application/octet-stream\" -Uri https://raw.githubusercontent.com/Akkadius/eqemu-install-v2/master/eqemu_config.json -OutFile eqemu_config.json"
 )
 IF NOT EXIST "eqemu_config.json" GOTO GET_EQEMU_UPDATE
 
