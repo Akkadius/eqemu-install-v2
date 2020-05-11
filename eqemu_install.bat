@@ -68,14 +68,14 @@ IF NOT EXIST "C:\Program Files\MariaDB 10.0" (
 :GET_EQEMU_UPDATE
 IF NOT EXIST "eqemu_server.pl" (
 	echo Fetching 'eqemu_server.pl'...
-	powershell -Command "\$ProgressPreference = 'SilentlyContinue'; Invoke-RestMethod -ContentType \"application/octet-stream\" -Uri https://raw.githubusercontent.com/EQEmu/Server/master/utils/scripts/eqemu_server.pl -OutFile eqemu_server.pl"
+	powershell -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-RestMethod -ContentType \"application/octet-stream\" -Uri https://raw.githubusercontent.com/EQEmu/Server/master/utils/scripts/eqemu_server.pl -OutFile eqemu_server.pl"
 )
 IF NOT EXIST "eqemu_server.pl" GOTO GET_EQEMU_UPDATE
 
 :GET_EQEMU_CONFIG
 IF NOT EXIST "eqemu_config.json" (
 	echo Fetching 'eqemu_config.json'...
-	powershell -Command "\$ProgressPreference = 'SilentlyContinue'; Invoke-RestMethod -ContentType \"application/octet-stream\" -Uri https://raw.githubusercontent.com/Akkadius/eqemu-install-v2/master/eqemu_config.json -OutFile eqemu_config.json"
+	powershell -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-RestMethod -ContentType \"application/octet-stream\" -Uri https://raw.githubusercontent.com/Akkadius/eqemu-install-v2/master/eqemu_config.json -OutFile eqemu_config.json"
 )
 IF NOT EXIST "eqemu_config.json" GOTO GET_EQEMU_UPDATE
 
