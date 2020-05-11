@@ -91,6 +91,12 @@ my %process_status = (
     1 => "UP",
 );
 
+my $zone_process_count        = 0;
+my $world_process_count       = 0;
+my $queryserv_process_count   = 0;
+my $ucs_process_count         = 0;
+my $loginserver_process_count = 0;
+
 sub print_status
 {
     print "									\r";
@@ -105,11 +111,11 @@ sub print_status
 }
 
 while (1) {
-    my $zone_process_count        = 0;
-    my $world_process_count       = 0;
-    my $queryserv_process_count   = 0;
-    my $ucs_process_count         = 0;
-    my $loginserver_process_count = 0;
+    $zone_process_count        = 0;
+    $world_process_count       = 0;
+    $queryserv_process_count   = 0;
+    $ucs_process_count         = 0;
+    $loginserver_process_count = 0;
 
     my $l_processes = `TASKLIST`;
     my @processes   = split("\n", $l_processes);
