@@ -36,6 +36,12 @@
         "password": "",
         "host": "127.0.0.1"
       },
+      "loginserver3": {
+        "port": "5998",
+        "account": "",
+        "password": "",
+        "host": "login.projecteq.net"
+      },
       "tcp": {
         "ip": "0.0.0.0",
         "port": "9001"
