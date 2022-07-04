@@ -53,9 +53,7 @@
       },
       "key": "somelongrandomstring12345asdfffff",
       "shortname": "Akkas PEQ Installer",
-      "longname": "Akkas PEQ Installer",
-      "localaddress": "0.0.0.0",
-      "address": "0.0.0.0"
+      "longname": "Akkas PEQ Installer"
     },
     "database": {
       "db": "peq",
