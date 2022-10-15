@@ -2,6 +2,8 @@
 cls
 del "logs/zone/" /q
 
+reg add HKCU\Console /v QuickEdit /t REG_DWORD /d 0 /f
+
 if exist bin/shared_memory.exe (
     "bin/shared_memory.exe"
 ) else (
