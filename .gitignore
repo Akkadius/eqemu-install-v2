@@ -1,1 +1,8 @@
 .idea/
+spire/
+.cache/
+.bash_history
+.mysql_history
+.viminfo
+.wget-hsts
+install_config.yaml
