@@ -1,4 +1,4 @@
-FROM debian:11-slim
+FROM ubuntu:22.10
 
 LABEL maintainer="Akkadius <akkadius1@gmail.com>"
 
