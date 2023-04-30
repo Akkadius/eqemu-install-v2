@@ -6,3 +6,4 @@ spire/
 .viminfo
 .wget-hsts
 install_config.yaml
+spire-windows-install.exe
