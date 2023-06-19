@@ -48,8 +48,32 @@ services:
   debian-11:
     image: akkadius/eqemu-install-v2-test-os:debian-11
     build:
-      context: ./containers/debian
+      context: containers/debian-11
     hostname: debian-11
+    tty: true
+    volumes:
+      - ./:/opt/eqemu-install-v2
+      - build-cache:/home/go/.cache/
+    environment:
+      TZ: America/Chicago
+      CGO_ENABLED: 0
+      APP_ENV: local
+      TERM: xterm-256color
+    ports:
+      - 8087:3007
+    networks:
+      - backend
+    command: "/bin/bash -c 'sudo chown go -R /home/go/pkg && go get || true && /bin/bash'"
+
+  #############################################
+  # debian 12
+  #############################################
+
+  debian-12:
+    image: akkadius/eqemu-install-v2-test-os:debian-12
+    build:
+      context: containers/debian-12
+    hostname: debian-12
     tty: true
     volumes:
       - ./:/opt/eqemu-install-v2
