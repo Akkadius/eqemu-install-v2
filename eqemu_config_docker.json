@@ -63,6 +63,20 @@
       "username": "eqemu",
       "password": "eqemu"
     },
+    "web-admin": {
+      "launcher": {
+        "runSharedMemory": true,
+        "runLoginserver": false,
+        "runQueryServ": false,
+        "isRunning": true,
+        "minZoneProcesses": 10,
+        "staticZones": "butcher,erudnext,freporte,qeynos,freeporte,oot,iceclad,nro,oasis,nedaria,abysmal,natimbi,timorous,abysmal,firiona,overthere"
+      },
+      "quests": {
+        "hotReload": true
+      },
+      "serverCodePath": "/home/eqemu/code/"
+    },
     "files": {
       "opcodes": "assets/opcodes/opcodes.conf",
       "mail_opcodes": "assets/opcodes/mail_opcodes.conf"
