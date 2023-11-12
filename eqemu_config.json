@@ -1,74 +1,81 @@
 {
-  "server": {
-    "zones": {
-      "defaultstatus": "0",
-      "ports": {
-        "low": "7000",
-        "high": "7400"
-      }
-    },
-    "qsdatabase": {
-      "host": "localhost",
-      "port": "3306",
-      "username": "root",
-      "password": "eqemu",
-      "db": "peq"
-    },
-    "chatserver": {
-      "port": "7778",
-      "host": ""
-    },
-    "mailserver": {
-      "host": "",
-      "port": "7778"
-    },
-    "world": {
-      "loginserver1": {
-        "account": "",
-        "password": "",
-        "legacy": "1",
-        "host": "login.eqemulator.net",
-        "port": "5998"
-      },
-      "loginserver2": {
-        "port": "5998",
-        "account": "",
-        "password": "",
-        "host": "127.0.0.1"
-      },
-      "loginserver3": {
-        "port": "5998",
-        "account": "",
-        "password": "",
-        "host": "login.projecteq.net"
-      },
-      "tcp": {
-        "ip": "127.0.0.1",
-        "port": "9001"
-      },
-      "telnet": {
-        "ip": "0.0.0.0",
-        "port": "9000",
-        "enabled": "true"
-      },
-      "key": "somelongrandomstring12345asdfffff",
-      "shortname": "Akkas PEQ Installer",
-      "longname": "Akkas PEQ Installer"
-    },
-    "database": {
-      "db": "peq",
-      "host": "localhost",
-      "port": "3306",
-      "username": "root",
-      "password": "eqemu"
-    },
-    "files": {
-      "opcodes": "assets/opcodes/opcodes.conf",
-      "mail_opcodes": "assets/opcodes/mail_opcodes.conf"
-    },
-    "directories": {
-      "patches": "assets/patches/",
-      "opcodes": "assets/opcodes/"
-    }
-  }
+	"server": {
+		"chatserver": {
+			"host": "External IP",
+			"port": "7778"
+		},
+		"database": {
+			"db": "peq",
+			"host": "127.0.0.1",
+			"password": "eqemu",
+			"port": "3306",
+			"username": "root"
+		},
+		"directories": {
+			"opcodes": "assets/opcodes/",
+			"patches": "assets/patches/"
+		},
+		"files": {
+			"mail_opcodes": "assets/opcodes/mail_opcodes.conf",
+			"opcodes": "assets/opcodes/opcodes.conf"
+		},
+		"http": {
+			"port": "9080",
+			"enabled": "true",
+			"mimefile": "mime.types"
+		},
+		"mailserver": {
+			"host": "External IP",
+			"port": "7778"
+		},
+		"qsdatabase": {
+			"db": "peq",
+			"host": "127.0.0.1",
+			"password": "eqemu",
+			"port": "3306",
+			"username": "root"
+		},
+		"world": {
+			"key": "SomeRandomString",
+			"loginserver1": {
+				"account": "",
+				"host": "login.projecteq.net",
+				"password": "",
+				"port": "5998"
+			},
+			"loginserver2": {
+				"account": "",
+				"host": "login.eqemulator.net",
+				"password": "",
+				"port": "5998"
+			},
+			"loginserver3": {
+				"account": "",
+				"host": "127.0.0.1",
+				"password": "",
+				"port": "5998"
+			},			
+			"longname": "Akkas PEQ Installer",
+			"shortname": "Akkas PEQ Installer",
+			"localaddress": "127.0.0.1",
+			"address": "External IP",
+			"tcp": {
+				"ip": "127.0.0.1",
+				"port": "9001"
+			},
+			"telnet": {
+				"enabled": "true",
+				"ip": "0.0.0.0",
+				"port": "9000"
+			},
+			"locked": "false"
+ 		},
+		"zones": {
+			"defaultstatus": "0",
+			"ports": {
+				"high": "7400",
+				"low": "7000"
+			}
+		}
+	}
 }
