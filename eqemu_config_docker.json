@@ -14,13 +14,9 @@
       "password": "eqemu",
       "db": "peq"
     },
-    "chatserver": {
+    "ucs": {
       "port": "7778",
       "host": ""
-    },
-    "mailserver": {
-      "host": "",
-      "port": "7778"
     },
     "world": {
       "loginserver1": {
